@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>3D Highway Bike Racer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🏍️ 3D Highway Bike Racer</h1>
+            <div class="stats">
+                <span>Speed: <b id="speed">0</b> km/h</span>
+                <span>Score: <b id="score">0</b></span>
+            </div>
+        </header>
+        <!-- 3D Game Canvas -->
+        <div id="game">
+            <div id="start-screen">
+                <h2 id="message">READY TO RACE?</h2>
+                <p>
+                    Dodge traffic, activate nitro and
+                    become the highway champion!
+                </p>
+                <button id="start-btn">
+                    START RACE 🏁
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Controls -->
+        <div class="controls">
+            <button id="left-btn">◀ LEFT</button>
+            <button id="brake-btn">BRAKE</button>
+            <button id="nitro-btn">⚡ NITRO</button>
+            <button id="right-btn">RIGHT ▶</button>
+        </div>
+        <p class="instructions">
+            Use arrow keys or touch controls to drive.
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

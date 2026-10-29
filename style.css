@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #07111f;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+.game-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 12px;
+}
+header {
+    padding: 12px;
+}
+h1 {
+    color: #00f5d4;
+    font-size: clamp(20px, 4vw, 32px);
+    margin-bottom: 12px;
+}
+.stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 12px;
+    background: #142139;
+    border-radius: 10px;
+}
+#game {
+    position: relative;
+    width: 100%;
+    height: min(65vh, 650px);
+    min-height: 350px;
+    overflow: hidden;
+    background: #87ceeb;
+    border-radius: 14px;
+    margin-top: 12px;
+}
+#game canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#start-screen {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 25px;
+    background: rgba(4, 10, 24, 0.65);
+}
+#start-screen h2 {
+    font-size: clamp(28px, 6vw, 46px);
+    color: #00f5d4;
+}
+#start-screen p {
+    max-width: 400px;
+    line-height: 1.6;
+}
+#start-btn {
+    background: #00f5d4;
+    color: #07111f;
+    padding: 15px 28px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+}
+.controls button {
+    padding: 15px 5px;
+    border-radius: 10px;
+    background: #17243a;
+    color: white;
+    border: 1px solid #465672;
+    font-weight: bold;
+    touch-action: none;
+}
+#nitro-btn {
+    color: #00f5d4;
+}
+#brake-btn {
+    color: #ff7474;
+}
+.controls button:active {
+    background: #00f5d4;
+    color: #07111f;
+}
+.instructions {
+    margin: 14px 0;
+    color: #aab7ca;
+    font-size: 12px;
+}
+.hidden {
+    display: none !important;
+}
+@media (max-width: 450px) {
+    .game-container {
+        padding: 7px;
+    }
+    #game {
+        height: 58vh;
+        min-height: 320px;
+    }
+    .controls button {
+        font-size: 11px;
+        padding: 15px 2px;
+    }
+}
